@@ -5,7 +5,11 @@ window.onload = () => {
 
   // panelFaqAnswer
   let panelFaqAnswer = document.querySelectorAll(".panel-faq-answer");
-  console.log(panelFaqAnswer[i]);
+  // console.log(panelFaqAnswer);
+
+  // btn-all-close
+  const btnAllClose = document.getElementById("btn-all-close");
+  console.log(btnAllClose);
 
   // 반복문 순회하며 해당 FAQ제목 클릭시 콜백처리
   for (let i = 0; i < panelFaqComtainer.length; i++) {
@@ -18,4 +22,12 @@ window.onload = () => {
       panelFaqAnswer[i].classList.add("active");
     });
   }
+  btnAllClose.addEventListener("click", function () {
+    console.log("모두 닫기 버튼 클릭..");
+
+    // 버튼 클릭시 처리할 일
+    for (let i = 0; i < panelFaqAnswer.length; i++) {
+      panelFaqAnswer[i].classList.remove("active");
+    }
+  });
 };
