@@ -1,0 +1,42 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.panel-faq-container {
+  margin-bottom: -16px;
+}
+
+.panel-faq-title {
+  color: #00eaea;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.panel-faq-answer {
+  /* display: none; */
+  /* padding: 15px; */
+  height: 0px;
+  overflow: hidden;
+}
+
+#btn-all-close {
+  padding: 10px 25px;
+  margin-bottom: 10px;
+  float: right;
+  background-color: skyblue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#btn-all-close:hover {
+  background-color: pink;
+  transition: all 0.35s;
+}
+
+.active {
+  display: block;
+  height: 300px;
+}
