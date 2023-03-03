@@ -1,0 +1,17 @@
+.btnSetLocalData,
+.btnGetLocalData {
+  width: 120px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 25px;
+}
+
+.btnSetLocalData:hover,
+.btnGetLocalData:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.35s;
+  cursor: pointer;
+}

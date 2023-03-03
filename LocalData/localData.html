@@ -14,5 +14,41 @@
       crossorigin="anonymous"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h3 style="text-align: center; padding: 50px">
+        Local Data
+        <small class="text-muted">with localStorage - setItem, getItem</small>
+      </h3>
+      <table class="table table-bordered table-striped table-hover">
+        <caption>
+          Method of localStorage
+        </caption>
+        <thead class="text-center">
+          <tr>
+            <th>Local Storage Method</th>
+            <th>Input</th>
+            <th>Button</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td style="vertical-align: middle">
+              브라우저 로컬 데이터에 저장하기
+            </td>
+            <td style="vertical-align: middle">
+              <input type="text" />
+            </td>
+            <td><button class="btnSetLocalData">Set Data</button></td>
+          </tr>
+          <tr>
+            <td class="align-middle">브라우저 로컬 데이터에 가져오기</td>
+            <td class="align-middle">🔝위에 표시</td>
+            <td><button class="btnGetLocalData">Get Data</button></td>
+            <!-- valign: middle 이거는 안될 수 있다. -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
