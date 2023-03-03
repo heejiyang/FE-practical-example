@@ -13,6 +13,7 @@ window.onload = () => {
     console.log(localStorage.key(0)); // userId
     // key가 몇개인지? -> length
     console.log(localStorage.key.length);
+
     // ----------------------------------------------------------
     // 배열 정보를 동적으로 테이블 생성하여 tbody에 삽입하기
     /*
@@ -74,12 +75,47 @@ window.onload = () => {
     hTbody.innerHTML = result;
     */
 
+    // ----------------------------------------------------------
     // 결과 변수 -> 우선 반복문 쓰지 않고 하나만 출력
-    let result = "";
-    result += "<tr>";
-    result +=
-      "<td class='align-middle' width = '30%'>" + localStorage.key(0) + "</td>";
-    result += "<td class='align-middle' width = '30%'>" + getData + "</td>";
-    result += "</tr>";
+    // let result = "";
+    // result += "<tr>";
+    // result +=
+    //   "<td class='align-middle' width = '30%'>" + localStorage.key(0) + "</td>";
+    // result +=
+    //   "<td class='align-middle' width = '30%'>" +
+    //   localStorage.getItem(localStorage.key(0)) +
+    //   "</td>";
+    // result += "<td><button class='btnRemove btn'>Remove</button></td>";
+    // result += "</tr>";
+    // console.log(result);
+    // let hTbody = document.getElementById("htmlTbody");
+    // hTbody.innerHTML = result;
+
+    // ----------------------------------------------------------
+    // 키 순회하면서 key:value 값들 출력하기
+    console.log("로컬 스토리지 길이 = " + localStorage.length);
+    let ar = new Array();
+    let result2 = "";
+
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      console.log(`${key} : ${localStorage.getItem(key)}`);
+
+      // 결과 변수
+      result2 += "<tr>";
+      result2 += "<td class='align-middle' width='30%'>" + key + "</td>";
+      result2 +=
+        "<td class='align-middle'>" + localStorage.getItem(key) + "</td>";
+      result2 += "<td><button class='btnRemove btn'>Remove</button></td>";
+      result2 += "</tr>";
+
+      // 배열에 저장
+      ar.push(result2);
+    }
+    // console.log(ar);
+
+    // Append (붙이기)
+    $("htmlTbody").empty();
+    $("htmlTbody").append(result2);
   });
 };
