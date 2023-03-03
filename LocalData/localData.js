@@ -31,10 +31,19 @@ window.onload = () => {
       input.value = getData;
     }
   });
+
+  // Remove 버튼 클릭 시
+  const btnRLD = document.querySelector(".btnRemovelLocalData");
+  btnRLD.addEventListener("click", () => {
+    // 할일 처리 -> 해당 키의 로컬 데이터 삭제
+    localStorage.removeItem("userId");
+    alert("삭제 완료!!");
+  });
 };
 
 // 브라우저 로컬 데이터에 저장하기
-// 주요 메서트 2개
+// 주요 메서트 3개
 // 값 저장하기 localStorage.setItem('key', value)
 // 값 가져오기 localStorage.getItem('key')
+// 값 삭제하기 localStorage.removeItem('key')
 // 키를 그대로 놓고 새로운 값을 저장하면 덮어쓰기가 되면서 기존 로컬 데이터 정보가 수정.

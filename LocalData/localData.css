@@ -1,5 +1,6 @@
 .btnSetLocalData,
-.btnGetLocalData {
+.btnGetLocalData,
+.btnRemovelLocalData {
   width: 120px;
   background-color: aquamarine;
   border: none;
@@ -9,7 +10,8 @@
 }
 
 .btnSetLocalData:hover,
-.btnGetLocalData:hover {
+.btnGetLocalData:hover,
+.btnRemovelLocalData:hover {
   background-color: black;
   color: white;
   transition: all 0.35s;
