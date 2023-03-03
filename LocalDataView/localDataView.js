@@ -7,17 +7,15 @@ window.onload = () => {
   // 버튼 클릭 시 -> 할 일 처리
   btnAllView.addEventListener("click", () => {
     // 할 일 처리 -> 로컬 스토리지 데이터 값들을 가져와서 출력.
-    // const getData = localStorage.getItem("background-color");
-    // console.log(getData);
-
+    const getData = localStorage.getItem("background-color");
+    console.log(getData);
     // key만 출력하기
-    // console.log(localStorage.key(0)); // userId
-
+    console.log(localStorage.key(0)); // userId
     // key가 몇개인지? -> length
-    // console.log(localStorage.key.length);
-
+    console.log(localStorage.key.length);
     // ----------------------------------------------------------
     // 배열 정보를 동적으로 테이블 생성하여 tbody에 삽입하기
+    /*
     let ar = new Array();
     let result = "";
 
@@ -74,5 +72,14 @@ window.onload = () => {
     // hTbody.innerText(result); // 괄호가 x
     // hTbody.innerText = result; // hTbody.append(result) 와 같은 결과
     hTbody.innerHTML = result;
+    */
+
+    // 결과 변수 -> 우선 반복문 쓰지 않고 하나만 출력
+    let result = "";
+    result += "<tr>";
+    result +=
+      "<td class='align-middle' width = '30%'>" + localStorage.key(0) + "</td>";
+    result += "<td class='align-middle' width = '30%'>" + getData + "</td>";
+    result += "</tr>";
   });
 };
