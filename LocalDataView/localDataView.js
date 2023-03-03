@@ -63,5 +63,16 @@ window.onload = () => {
     }
     let hTbody = document.getElementById("htmlTbody");
     console.log(hTbody);
+
+    // Append 해준다.(jQuery방법)
+    // $("#htmlTbody").empty();
+    // $("#htmlTbody").append(result);
+
+    // Append 해준다.(JS방법)
+    // hTbody.append(result); // 텍스트 문자열 형태로 Append
+    // hTbody.appendChild(result); // Node error
+    // hTbody.innerText(result); // 괄호가 x
+    // hTbody.innerText = result; // hTbody.append(result) 와 같은 결과
+    hTbody.innerHTML = result;
   });
 };
