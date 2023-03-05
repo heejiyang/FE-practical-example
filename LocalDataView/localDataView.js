@@ -114,7 +114,7 @@ window.onload = () => {
     }
     // console.log(ar);
 
-    // Append (붙이기)
+    // Append (붙이기) (jQuery사용)
     $("htmlTbody").empty();
     $("htmlTbody").append(result2);
   });
