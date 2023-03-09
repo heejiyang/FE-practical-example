@@ -79,6 +79,11 @@ const allDelCookies = function (domain, path) {
     //     "; path = " +
     //     path;
   }
+
+  // 반복문 역순으로 cookie 전체 삭제하기
+  for (let i = cookies.length - 1; i >= 0; i++) {
+    document.cookie = cookies[i].split("=")[0] + "=; expires =" + expiration;
+  }
 };
 
 // addEventListener
