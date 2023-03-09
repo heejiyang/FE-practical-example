@@ -60,6 +60,27 @@ const delCookie = function (cookiename) {
   alert("쿠키를 삭제했습니다.");
 };
 
+// cookie 젠체 삭제하기
+const allDelCookies = function (domain, path) {
+  (domain = domain || document.domain), (path = path || "/");
+
+  const cookies = document.cookie.split("; ");
+  const expiration = "Sat, 01 Jan 1972 00:00:00 GMT";
+
+  // 반복문 순회하면서 cookie 전체 삭제
+  for (let i = 0; i < cookies.length; i++) {
+    document.cookie = cookies[i].split("=")[0] + "=; expires =" + expiration;
+    //   document.cookie =
+    //     cookies[i].split("=")[0] +
+    //     "=; expires =" +
+    //     expiration +
+    //     "; domain = " +
+    //     domain +
+    //     "; path = " +
+    //     path;
+  }
+};
+
 // addEventListener
 const form = document.getElementById("form");
 form.addEventListener("submit", setCookie);
