@@ -21,7 +21,10 @@
         <small class="text-muted">with localStorage data view</small>
       </h3>
       <button class="btnCrc">Create row and column</button>
-      <table class="table table-bordered table-striped table-hover">
+      <table
+        class="table table-bordered table-striped table-hover"
+        id="myTable"
+      >
         <caption>
           Method of localStorage
         </caption>
@@ -30,16 +33,10 @@
             <th>Name</th>
             <th>Email</th>
             <th>Age</th>
-            <!-- <th>Pastime</th> -->
+            <th>Pastime</th>
           </tr>
         </thead>
-        <tbody class="text-center" id="htmlTbody">
-          <!-- <tr>
-            <td class="align-middle">background-color</td>
-            <td class="align-middle">black</td>
-            <td><button class="btnRemove btn">Remove</button></td>
-          </tr> -->
-        </tbody>
+        <tbody class="text-center" id="htmlTbody"></tbody>
       </table>
     </div>
   </body>

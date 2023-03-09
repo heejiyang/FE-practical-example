@@ -12,7 +12,28 @@ window.onload = () => {
 
     // JavaScript Table row and column.
     // Insert a row at the end of table.
-    // htmlTbody에 한 줄 삽입한다.
+    // htmlTbody에 한 줄 삽입한다. (tr삽입)
     const newRow0 = hTbody.insertRow();
+
+    // Insert a cell at the end of the row.
+    // tr사이에 td를 넣는다.
+    const newCell0 = newRow0.insertCell();
+    const newCell1 = newRow0.insertCell();
+    const newCell2 = newRow0.insertCell();
+    const newCell3 = newRow0.insertCell();
+
+    // Append - 텍스트 노드를 새롭게 생성한 Cell에 붙이기
+    const newText0 = document.createTextNode("홍길동");
+    newCell0.appendChild(newText0);
+    const newText1 = document.createTextNode("hong@hong.com");
+    newCell1.appendChild(newText1);
+    const newText2 = document.createTextNode("25");
+    newCell2.appendChild(newText2);
+    const newText3 = document.createTextNode("영화보기");
+    newCell3.appendChild(newText3);
+
+    // 테이블의 row구하기
+    const table = document.getElementById("myTable");
+    console.log(table.rows.length - 1);
   });
 };
