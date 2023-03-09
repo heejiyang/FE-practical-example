@@ -8,7 +8,7 @@ window.onload = () => {
   btnCrc.addEventListener("click", () => {
     // 할 일 처리
     let hTbody = document.getElementById("htmlTbody");
-    console.log(hTbody);
+    // console.log(hTbody);
 
     // JavaScript Table row and column.
     // Insert a row at the end of table.
@@ -35,15 +35,21 @@ window.onload = () => {
     // 테이블의 row구하기
     const table = document.getElementById("myTable");
     // thead있으므로 보통 순수 tbody쪽 row만 알기 위해 length -1을 해준다.
-    console.log(table.rows.length - 1);
-    console.log(table.rows[0]); // thead
-    console.log(table.rows[1]); // tbody의 first row
+    // console.log(table.rows.length - 1);
+    // console.log(table.rows[0]); // thead
+    // console.log(table.rows[1]); // tbody의 first row
 
     // cell이 몇 개인지 구하기
     const r = table.rows.length - 1;
-    const l = table.rows[r].cells.length;
+    const l = table.rows[0].cells.length;
     // 해당 row의 cell이 몇 개인지 출력
-    console.log(l);
-    console.log("테이블 row갯수는 = " + r);
+    // console.log(l);
+    // console.log("테이블 row갯수는 = " + r);
+
+    // 반복문 순회하면서 각 cell에 정보값을 세팅
+    for (let c = 0; c < l; c++) {
+      // hTbody.rows[r - 1].cells[0].innerHTML = `Data ${c}`;
+      hTbody.rows[r - 1].cells[c].innerHTML = `[${r - 1}][${c}]`;
+    }
   });
 };
