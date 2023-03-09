@@ -34,6 +34,16 @@ window.onload = () => {
 
     // 테이블의 row구하기
     const table = document.getElementById("myTable");
+    // thead있으므로 보통 순수 tbody쪽 row만 알기 위해 length -1을 해준다.
     console.log(table.rows.length - 1);
+    console.log(table.rows[0]); // thead
+    console.log(table.rows[1]); // tbody의 first row
+
+    // cell이 몇 개인지 구하기
+    const r = table.rows.length - 1;
+    const l = table.rows[r].cells.length;
+    // 해당 row의 cell이 몇 개인지 출력
+    console.log(l);
+    console.log("테이블 row갯수는 = " + r);
   });
 };
